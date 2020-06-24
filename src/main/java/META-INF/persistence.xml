@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+
+    <persistence-unit name="NewPersistenceUnit">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <mapping-file>orm/Bus.xml</mapping-file>
+        <class>entity.Entitybus</class>
+        <class>entity.Naming</class>
+        <properties>
+            <property name="eclipselink.jdbc.url" value="jdbc:hsqldb:file:C:/Users/Olga Pavlova/IdeaProjects/ALL_Jakarta/my_jpa_EclipseLink/db/DB"/>
+            <property name="eclipselink.jdbc.driver" value="org.hsqldb.jdbc.JDBCDriver"/>
+            <property name="eclipselink.jdbc.user" value="sa"/>
+            <property name="eclipselink.jdbc.password" value="sa"/>
+            <property name="eclipselink.session.customizer" value="util.MySessionCustomizer" />
+        </properties>
+    </persistence-unit>
+</persistence>
